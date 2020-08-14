@@ -12,6 +12,9 @@ cat /var/lib/docker/volumes/jenkins-data/_data/secrets/initialAdminPassword;
 ** copy the password , login to http://127.0.0.1:11000/ , install suggested plugins and configure admin password ** 
 ** install maven integration plugin **
 sudo apt install maven -y;
+which mvn; #will result maven binary - copy the path jenkins -> manage -> global tool config -> maven
+** fork https://github.com/deepak2717/HelloWorldMaven ** 
+https://github.com/Michael-Masas/HelloWorldMaven
 
 
 
