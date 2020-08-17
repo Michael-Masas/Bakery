@@ -1,28 +1,33 @@
-pipeline { 
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                withMaven(maven : 'apache-maven-3.3.9'){
-                        bat "mvn clean compile"
+pipeline {
+    agent any
+    stages
+    {
+        stage('Checkout From SCM')
+        {
+            steps
+                {
+                        sh "git clone https://github.com/Michael-Masas/Bakery.git"
                 }
-            }
         }
-        stage('Test'){
-            steps {
-                withMaven(maven : 'apache-maven-3.3.9'){
-                        bat "mvn test"
+        stage('Build')
+        {
+            steps
+                {
+                sh "cd /var/jenkins_home/workspace/Maven-Build/Bakery"
+                }
+                {
+                sh "mvn install"
                 }
 
-            }
         }
-        stage('Deploy') {
-            steps {
-               withMaven(maven : 'apache-maven-3.3.9'){
-                        bat "mvn deploy"
+        stage('Cleanup')
+        {
+            steps
+                {
+                sh "rm -rf /var/jenkins_home/workspace/Maven-Build/Bakery"
                 }
 
-            }
+
         }
     }
 }
