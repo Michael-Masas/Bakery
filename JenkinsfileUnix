@@ -5,12 +5,9 @@ pipeline {
         stage('Checkout From SCM') 
         { 
             steps 
-            {
-                
                 {
                         sh "git clone https://github.com/Michael-Masas/Bakery.git"
                 }
-            }
         }
         }
     }
