@@ -1,26 +1,16 @@
 pipeline { 
     agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                withMaven(maven : 'apache-maven-3.3.3'){
-                        sh "mvn clean compile"
+    stages 
+    {
+        stage('Checkout From SCM') 
+        { 
+            steps 
+            {
+                
+                {
+                        sh "git clone https://github.com/Michael-Masas/Bakery.git"
                 }
             }
         }
-        stage('Test'){
-            steps {
-                withMaven(maven : 'apache-maven-3.3.3'){
-                        sh "mvn test"
-                }
-
-            }
         }
-        stage('Deploy') {
-            steps {
-               withMaven(maven : 'apache-maven-3.3.3'){
-                        sh "mvn deploy"
-                }
-
-            }
-        }
+    }
