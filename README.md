@@ -21,14 +21,14 @@ cat /var/lib/docker/volumes/jenkins-data/_data/secrets/initialAdminPassword;
 
 docker exec -it -u root jenkins /bin/bash
 
-** inside jenkins docker bash ** --> apt update; apt install maven -y; 
-
-
+** inside jenkins docker bash install maven ** --> apt update; apt install maven -y;
 
 which mvn; #will result maven binary - copy the path jenkins -> manage -> global tool config -> maven
 
 ** fork https://github.com/deepak2717/HelloWorldMaven ** 
 https://github.com/Michael-Masas/Bakery
+
+** Configure Clone , Build , Remove in JenkinsFileUnix ** 
 
 
 
