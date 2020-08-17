@@ -9,5 +9,15 @@ pipeline {
                         sh "git clone https://github.com/Michael-Masas/Bakery.git"
                 }
         }
+        stage('Build')
+        {
+            steps
+                {
+                sh "cd /var/jenkins_home/workspace/Maven-Build/Bakery"
+                }
+                {
+                sh "mvn install"
+                }
+                
         }
     }
