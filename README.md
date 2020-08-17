@@ -28,7 +28,7 @@ which mvn; #will result maven binary - copy the path jenkins -> manage -> global
 ** fork https://github.com/deepak2717/HelloWorldMaven ** 
 https://github.com/Michael-Masas/Bakery
 
-** Configure Clone , Build , Remove in JenkinsFileUnix ** 
+** Configure Pipeline Job to  Clone , Build , Remove in JenkinsFileUnix from github repo above ** 
 
 
 
