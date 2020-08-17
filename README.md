@@ -19,9 +19,11 @@ cat /var/lib/docker/volumes/jenkins-data/_data/secrets/initialAdminPassword;
 
 ** copy the password , login to http://127.0.0.1:11000/ , install suggested plugins and configure admin password ** 
 
-** install maven integration plugin **
+docker exec -it -u root jenkins /bin/bash
 
-sudo apt install maven -y;
+** inside jenkins docker bash ** --> apt update; apt install maven -y; 
+
+
 
 which mvn; #will result maven binary - copy the path jenkins -> manage -> global tool config -> maven
 
